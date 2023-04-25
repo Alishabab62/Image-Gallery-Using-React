@@ -65,7 +65,7 @@ export default function Grid() {
             fileSize:"5"
         }
     ]
-// const [data , setData] = useState(imageArray);
+
 const [filter , setFilter] = useState(imageArray);
 const [input , setInput] = useState({
     imageName:"",
@@ -80,7 +80,6 @@ const [noImage , setNoImage] = useState(false)
 function viewGridChangeFun(){
     setViewChangeBtn(false);
     // imageWrapper.current.style.flexDirection = "column";
-    // imageWrapper.current.style.backGroundColor = "red" 
     // console.log(imageWrapper.current)
 }
 
@@ -95,7 +94,7 @@ function handleInput(e){
         }))
     const tempArray=imageArray.filter((data)=>{
        if(data.imgName.includes(input.imageName) && data.fileSize.includes(input.imageSize)){
-           return data
+           return data 
        }
     })
     
